@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1920px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -8,6 +8,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --primary-color: #7d2436;
+  --secondary-color: #F4E8EC;
+  --tertiary-color: #bd8186;
+  --quantiary-color: #ead3c1;
+  /* --secondary-color: #FFF4F5; */
+  /* --secondary-color: #FFF6F7; */
+  --primary-black: #000;
+  --primary-white: #fff;
+  --secondary-white: #f1f1f1;
+  --tertiary-white: #eeeeee;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -86,13 +97,33 @@ body {
 }
 
 body {
+  max-width: 1920px;
+  margin: 0 auto;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+p {
+  width: 76ch;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  /* color: var(--tertiary-color); */
+  color: var(--primary-color);
 }
 
 a {

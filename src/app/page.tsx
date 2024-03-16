@@ -4,7 +4,24 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <header className={styles.header}>
+        <div className={styles.header__inner}>
+          <div className={styles.logo__wrapper}>
+            <a className={styles.logo} href="/">Jessica Masuga Consulting</a>
+          </div>
+          <nav className={styles.nav}>
+            <ul className={styles.nav__ul}>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">My Work</a></li>
+              <li><a href="/">Contact</a></li>
+              <li><a href="/">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
@@ -26,9 +43,9 @@ export default function Home() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -37,6 +54,38 @@ export default function Home() {
           height={37}
           priority
         />
+      </div> */}
+
+      <div className={styles.hero}>
+        <div className={styles.hero__content}>
+          <div className={styles.hero__heading}>
+            <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710558135/jessica-masuga_zkllpa.png" alt="Jessica Masuga." />
+            <h1>
+              Jessica Masuga Consulting
+            </h1>
+          </div>
+          <p>
+            I’m an expert storyteller who creates a broad range of impactful, high-quality healthcare communications programs. My focus is on building emotional connections between my clients and their key audiences because great communications efforts are rooted in the stories we tell.
+          </p>
+          <p>
+            I have more than 20 years of experience leading corporate and product communication programs; 15 years of corporate healthcare communications experience and 9 years of PR agency experience.
+          </p>
+          <p>
+            I specialize in integrated communications for healthcare companies including biotech, medtech, medical device, pharma, and nonprofits. I’m ready to support any size program in partnership with your organization.
+          </p>
+        </div>
+        <img className={styles.hero__img} src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710562438/jmc-background_wf1mh2.jpg" alt="" />
+      </div>
+
+      <div className={styles.contact__wrap}>
+        <div className={styles.contact__content}>
+          <h2>
+            Contact Me
+          </h2>
+          <p>
+            My inbox is always open, you can contact me via this form or at jessmasuga@hotmail.com.
+          </p>
+        </div>
       </div>
 
       <div className={styles.grid}>
