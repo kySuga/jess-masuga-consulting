@@ -11,11 +11,11 @@ export default function Home() {
           </div>
           <nav className={styles.nav}>
             <ul className={styles.nav__ul}>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">My Work</a></li>
-              <li><a href="/">Contact</a></li>
-              <li><a href="/">Blog</a></li>
+              <li><a href="/home">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/my-work">My Work</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/blog">Blog</a></li>
             </ul>
           </nav>
         </div>
@@ -59,7 +59,7 @@ export default function Home() {
       <div className={styles.hero}>
         <div className={styles.hero__content}>
           <div className={styles.hero__heading}>
-            <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710558135/jessica-masuga_zkllpa.png" alt="Jessica Masuga." />
+            <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710642006/jessica-masuga_ktzf5n.jpg" alt="Jessica Masuga." />
             <h1>
               Jessica Masuga Consulting
             </h1>
@@ -74,11 +74,11 @@ export default function Home() {
             I specialize in integrated communications for healthcare companies including biotech, medtech, medical device, pharma, and nonprofits. I’m ready to support any size program in partnership with your organization.
           </p>
         </div>
-        <img className={styles.hero__img} src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710562438/jmc-background_wf1mh2.jpg" alt="" />
+        <img className={styles.hero__img} src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710640571/jmc-background_ygoixy.jpg" alt="" />
       </div>
 
-      <div className={styles.contact__wrap}>
-        <div className={styles.contact__content}>
+      <div className={styles.wrap}>
+        <div className={styles.content__contact}>
           <h2>
             Contact Me
           </h2>
@@ -88,7 +88,42 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.grid}>
+      <div className={`${styles.wrap} ${styles.campaign}`}>
+        <div className={styles.content__campaign}>
+          <h2>
+            Campaigns & Efforts
+          </h2>
+          <p>
+            Explore a featured selection of my campaigns and efforts below.
+          </p>
+        </div>
+        {/* TODO: Build out slider(s) */}
+        <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710643849/campaigns-and-efforts-placeholder_hucrcr.png" alt="" />
+      </div>
+
+      <footer className={styles.footer}>
+        <div className={styles.footer__wrap}>
+          <nav className={styles.footer__nav}>
+            <ul className={styles.nav__ul}>
+              <li><a href="/home">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/my-work">My Work</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </nav>
+          <div className={styles.footer__content}>
+            <h2>
+              Jessica Masuga Consulting, LLC
+            </h2>
+            <p className={styles.copyright}>
+              &copy; <time id={styles.footer__date} datetime="1973">1973</time> — Jessica Masuga Consluting, LLC
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      {/* <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -138,7 +173,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }

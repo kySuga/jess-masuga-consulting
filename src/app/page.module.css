@@ -29,20 +29,21 @@
 }
 .logo {
   position: relative;
-  font-size: 1.8rem;
+  font-size: 2.25rem;
   color: var(--secondary-white);
 }
 .nav {
-  width: 25rem;
+  width: 40rem;
 }
 .nav__ul {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style-type: "";
 }
 .nav__ul a {
   padding-bottom: 3px; /* adds space between text and hover bg-image */
+  font-size: 1.4rem;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--secondary-white), var(--secondary-white));
   background-size: 0 0.1rem;
@@ -51,11 +52,15 @@
   color: var(--secondary-white);
   transition: background-size 0.2s ease-out;
 }
+.footer__nav .nav__ul a {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--primary-color), var(--primary-color));
+  color: var(--primary-color);
+}
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   /* padding: 6rem; */
   min-height: 100vh;
@@ -63,6 +68,8 @@
 
 .hero {
   position: relative;
+  /* this does not feel right... adding LH to remove space between hero section and the section below it */
+  line-height: 0;
 }
 .hero__heading {
   display: flex;
@@ -75,7 +82,7 @@
   width: 100%;
   max-width: 11rem;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.45rem;
 }
 .hero p {
   max-width: 56ch;
@@ -92,19 +99,69 @@
   height: auto;
   padding-block-start: 6rem;
 }
-.hero__img::after {
+/* .hero::after {
   content: "";
-  display: block;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100%;
+  display: block;
   background-color: rgba(0,0,0,0.3);
-}
-.contact__wrap {
+} */
+.wrap {
   width: 100%;
   padding: 4rem;
   margin: 0 auto;
   text-align: center;
-  background-color: var(--tertiary-white);
+  background-color: var(--primary-color);
+}
+.wrap.campaign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--secondary-white);
+}
+.content__contact {
+  color: var(--tertiary-white);
+}
+.content__campaign {
+  width: 75rem;
+  text-align: left;
+}
+.content__campaign p {
+  margin: 0 0 1rem;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1920px;
+  padding: 4rem 3rem;
+  margin: 0 auto;
+}
+.footer h2 {
+  width: 23ch;
+}
+.footer__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1640px;
+  margin: 0 auto;
+}
+.footer__nav {
+  width: 35rem;
+}
+.footer__nav .nav__ul a {
+  color: var(--primary-color);
+}
+.footer__content {
+  width: fit-content;
+}
+.footer__content p {
+  width: auto;
 }
 
 .description {
@@ -290,9 +347,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
+  /* .vercelLogo {
     filter: invert(1);
-  }
+  } */
 
   /* .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
