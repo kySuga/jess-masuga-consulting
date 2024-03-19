@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// components
+import Header from "./components/header";
+import Footer from "./components/footer";
+
+const roboto = Roboto({ subsets: ["latin"], weight: ["100", "400", 
+"700"] });
 
 export const metadata: Metadata = {
   title: "Jessica Masuga Consulting",
@@ -16,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <Header />
+        {/* <main className={global.main}> */}
+          {children}
+        {/* </main> */}
+        <Footer />
+      </body>
     </html>
   );
 }
