@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./home.module.css";
 
+// homepage
 export default function Page() {
   return (
     <>
-    {/* main is temporary till I figure out adding styles in layout.tsx */}
-<main className={styles.main}> 
+
       <div className={styles.hero}>
         <div className={styles.hero__content}>
           <div className={styles.hero__heading}>
@@ -30,7 +30,7 @@ export default function Page() {
         </picture>
       </div>
 
-      <div className={styles.wrap}>
+      <div className="banner">
         <div className={styles.content__contact}>
           <h2>
             Contact Me
@@ -52,7 +52,6 @@ export default function Page() {
         </div>
         <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710643849/campaigns-and-efforts-placeholder_hucrcr.png" alt="" />
       </div>
-</main>
 
     </>
   );

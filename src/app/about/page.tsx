@@ -5,8 +5,7 @@ import styles from "./about.module.css";
 export default function Page() {
   return (
     <>
-    {/* main is temporary till I figure out adding styles for layout.tsx */}
-<main className={styles.main}>
+    
       <div className={styles.about}>
         <picture>
           <source srcSet="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710699832/jmc-background-m_ixd7r6.jpg" media="(max-width: 640px)" />
@@ -70,7 +69,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className={styles.wrap}>
+      <div className="banner">
         <div className={styles.content__quote}>
           <figure>
             <blockquote>
@@ -82,7 +81,6 @@ export default function Page() {
           </figure>
         </div>
       </div>
-</main>
 
     </>
   );
