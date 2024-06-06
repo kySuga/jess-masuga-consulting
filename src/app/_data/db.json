@@ -1,0 +1,43 @@
+{
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "My Renaissance",
+      "body": "The highbrow title for this first blog article is \\“My Renaissance.\\” The lowbrow title is \\“Are You There, God? I Need a Pina Colada.\\” What does the word \\“renaissance\\” mean? Renaissance is a French word meaning \\“rebirth.\\” It refers to a period in European civilization that was marked by a revival of classical learning and wisdom. What is a personal renaissance? I like what Joel Zaslofsky has to say in \\“9 Principles to Ignite and Fast Track Your Personal Renaissance\\”: \\“One of our Simple Sages, Colin Wright of Exile Lifestyle, explains a personal renaissance is a time in your life when you feel motivated, ambitious, eager and anticipatory…To me, a personal renaissance is a period of great optimism, strength, and new ideas. You feel everything will work out well…but that's not all. During this period, you can more easily acquire the tools, skills, and resources to achieve whatever goals you need to accomplish. And better yet, you can define with laser focus what your goals actually are…something that can normally be embarrassingly elusive.\\”",
+      "image": {
+        "url": "",
+        "alt": "",
+        "width": "",
+        "height": ""
+      },
+      "date": "Feb. 12, 2024"
+    },
+    {
+      "id": "2",
+      "title": "",
+      "body": "",
+      "image": {
+        "url": "",
+        "alt": "",
+        "width": "",
+        "height": ""
+      },
+      "date": ""
+    }
+  ],
+  "myWork": [
+    {
+      "id": "1",
+      "title": "Press Materials & Content",
+      "description": "We'll make some happy little bushes here. Go out on a limb - that's where the fruit is. We'll put all the little clouds in and let them dance around and have fun.",
+      "image": {
+        "url": "",
+        "alt": "",
+        "width": "",
+        "height": ""
+      },
+      "date": "10th February 2024",
+      "pdf": ""
+    }
+  ]
+}

@@ -16,7 +16,9 @@
   /* primary, secondary, tertiary, quaternary, quinary, senary, septenary, octonary, nonary, denary */
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -106,12 +108,14 @@ label {
 input,
 textarea {
   height: 3rem;
-  padding-left: 0.7rem;
+  padding: 0.7rem;
   border-radius: var(--border-radius);
   font-size: 1.4rem;
 }
 textarea {
-  height: 7rem;
+  min-height: 7rem;
+  max-width: 683px;
+  min-width: 683px;
 }
 .size-adj {
   font-size: 1rem;
