@@ -1,0 +1,13 @@
+.wrap__blog {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.wrap__posts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8rem;
+}
+.wrap__posts a:hover > h2,
+.wrap__posts a:focus-visible > h2 {
+  text-decoration-line: underline;
+}

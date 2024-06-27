@@ -12,6 +12,8 @@ const Post = ({ post }: { post: SanityDocument }) => {
   return (
     <>
       <h1>{post.title}</h1>
+      <h2>{post.author}</h2>
+      <h3>{post.publishedAt}</h3>
       {post?.mainImage ? (
         <Image
           src={builder.image(post.mainImage).width(300).height(300).url()}

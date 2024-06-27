@@ -1,3 +1,5 @@
+"use client";
+
 import type { SanityDocument } from "@sanity/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,6 +25,8 @@ const Posts = ({ posts = [] }: { posts: SanityDocument[] }) => {
             />
           ) : null}
           <h2>{post.title}</h2>
+          <h3>{post.author}</h3>
+          <time dateTime={post?.publishedAt}>{post?.publishedAt}</time>
         </Link>
       ))}
     </>

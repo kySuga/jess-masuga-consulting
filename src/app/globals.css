@@ -1,3 +1,13 @@
+/* 
+  @media px to rem
+  640px = 40rem
+  768px = 48rem
+  1024px = 64rem
+  1280px = 80rem
+  1536px = 96rem
+  1920px = 120rem
+ */
+
 :root {
   --max-width: 1920px;
   --border-radius: 0.45rem;
@@ -10,10 +20,46 @@
   /* --secondary-color: #FFF4F5; */
   /* --secondary-color: #FFF6F7; */
   --primary-black: #000;
+  --secondary-black: #232b2b;
   --primary-white: #fff;
   --secondary-white: #f1f1f1;
   --tertiary-white: #eeeeee;
   /* primary, secondary, tertiary, quaternary, quinary, senary, septenary, octonary, nonary, denary */
+
+  /* 320px to 640px */
+  /* Step -2: 12.642px → 18.4455px */
+  /* --step--2: clamp(0.7901rem, 0.4274rem + 1.8136vi, 1.1528rem); */
+  /* Step -1: 14.2222px → 19.6813px */
+  /* --step--1: clamp(0.8889rem, 0.5477rem + 1.706vi, 1.2301rem); */
+  /* Step 0: 16px → 21px */
+  /* --step-0: clamp(1rem, 0.6875rem + 1.5625vi, 1.3125rem); */
+  /* Step 1: 18px → 22.407px */
+  /* --step-1: clamp(1.125rem, 0.8496rem + 1.3772vi, 1.4004rem); */
+  /* Step 2: 20.25px → 23.9083px */
+  /* --step-2: clamp(1.2656rem, 1.037rem + 1.1432vi, 1.4943rem); */
+  /* Step 3: 22.7813px → 25.5101px */
+  /* --step-3: clamp(1.4238rem, 1.2533rem + 0.8528vi, 1.5944rem); */
+  /* Step 4: 25.6289px → 27.2193px */
+  /* --step-4: clamp(1.6018rem, 1.5024rem + 0.497vi, 1.7012rem); */
+  /* Step 5: 28.8325px → 29.043px */
+  /* --step-5: clamp(1.802rem, 1.7889rem + 0.0658vi, 1.8152rem); */
+
+  /* Step -2: 12.642px → 22.2222px */
+  --step--2: clamp(0.7901rem, 0.1914rem + 2.9938vi, 1.3889rem);
+  /* Step -1: 14.2222px → 26.6667px */
+  --step--1: clamp(0.8889rem, 0.1111rem + 3.8889vi, 1.6667rem);
+  /* Step 0: 16px → 32px */
+  --step-0: clamp(1rem, 0rem + 5vi, 2rem);
+  /* Step 1: 18px → 38.4px */
+  --step-1: clamp(1.125rem, -0.15rem + 6.375vi, 2.4rem);
+  /* Step 2: 20.25px → 46.08px */
+  --step-2: clamp(1.2656rem, -0.3487rem + 8.0719vi, 2.88rem);
+  /* Step 3: 22.7813px → 55.296px */
+  --step-3: clamp(1.4238rem, -0.6083rem + 10.1609vi, 3.456rem);
+  /* Step 4: 25.6289px → 66.3552px */
+  --step-4: clamp(1.6018rem, -0.9436rem + 12.727vi, 4.1472rem);
+  /* Step 5: 28.8325px → 79.6262px */
+  --step-5: clamp(1.802rem, -1.3726rem + 15.873vi, 4.9766rem);
 }
 
 *,
@@ -34,13 +80,14 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   background-color: var(--secondary-white);
-  color: var(--primary-color);
+  color: var(--secondary-black);
 }
 
 main {
   min-height: 100vh;
   /* to compensate for fixed header */
-  padding-block-start: 6rem;
+  /* padding-block-start: 6rem; */
+  padding-block-start: 25%;
 }
 
 h1,
@@ -53,20 +100,25 @@ p {
   line-height: 1.5;
 }
 h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
+  font-size: var(--step-4);
 }
 h2 {
   margin-block-end: 0.25rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: var(--step-3);
 }
 h3 {
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
+  font-size: var(--step-2);
 }
 p {
-  max-width: 76ch;
+  width: 80vw;
+  /* max-width: 17rem; */
   margin: 0 auto;
   margin-block-end: 1rem;
-  font-size: 1.4rem;
+  /* font-size: 0.95rem; */
+  font-size: var(--step-0);
 }
 
 a {
@@ -210,11 +262,13 @@ button::before {
 }
 .logo {
   position: relative;
-  font-size: 2.25rem;
+  /* font-size: 1.25rem; */
+  font-size: var(--step-2);
   color: var(--secondary-white);
 }
 .nav {
-  width: 40rem;
+  /* width: 17rem; */
+  width: 80vw;
 }
 .nav__ul {
   display: flex;
@@ -223,7 +277,8 @@ button::before {
 }
 .nav__ul a {
   padding-bottom: 3px; /* adds space between text and hover bg-image */
-  font-size: 1.4rem;
+  /* font-size: 0.85rem; */
+  font-size: var(--step--1);
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--secondary-white), var(--secondary-white));
   background-size: 0 0.1rem;
@@ -269,7 +324,7 @@ button::before {
 
 .banner {
   width: 100%;
-  padding: 4rem;
+  padding: 4rem 0;
   margin: 0 auto;
   text-align: center;
   background-color: var(--primary-color);
@@ -281,6 +336,33 @@ button::before {
 }
 .banner p {
   margin-block-end: 0;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 2rem 0;
+  }
+  .header__inner {
+    flex-direction: column;
+  }
+  .logo__wrapper {
+    margin-block-end: 1rem;
+  }
+}
+
+@media (min-width: 641px) {
+  p {
+    font-size: 1.4rem;
+  }
+  .logo {
+    font-size: 2.25rem;
+  }
+  .nav {
+    width: 40rem;
+  }
+  .nav__ul a {
+    font-size: 1.4rem;
+  }
 }
 
 /* Enable hover only on non-touch devices */
