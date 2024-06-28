@@ -2,12 +2,6 @@
 
 .hero {
   position: relative;
-  /* background-image: url("https://res.cloudinary.com/do9qt3sjt/image/upload/v1719509571/jmc-background-m_ys7rsp.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 75rem; */
 }
 .hero h1 {
   width: 77vw;
@@ -19,25 +13,21 @@
   gap: 2rem;
   margin-block-end: 2rem;
 }
-.hero__headshotImg {
+.hero__profileImg {
   max-width: 60%;
 }
 .hero__bgImg {
   border-radius: 0;
 }
-/* .hero p {
-  max-width: 17rem;
-} */
 .hero__content {
   position: absolute;
-  top: 50%;
-  left: 9rem;
-  transform: translateY(-50%);
+  top: 57vh;
+  left: 50%;
+  transform: translate(-50%, -50vh);
+  width: 80vw;
 }
 .wrap {
-  /* width: 100%; */
   width: 80vw;
-  /* padding: 4rem; */
   padding: 4rem 0;
   margin: 0 auto;
   text-align: center;
@@ -52,12 +42,11 @@
   max-width: 1200px;
 }
 .content__contact {
-  width: fit-content;
+  width: 80vw;
   margin: 0 auto;
   color: var(--tertiary-white);
 }
 .content__campaign {
-  /* width: 75rem; */
   width: 80vw;
   text-align: left;
 }
@@ -67,7 +56,6 @@
 
 @media (max-width: 640px) {
   .hero h1 {
-    /* font-size: 1.5rem; */
     text-align: center;
   }
   .hero__heading {
@@ -76,12 +64,19 @@
     gap: 1.25rem;
     margin-block-end: 1.25rem;
   }
+}
+
+@media (min-width: 641px) {
   .hero__content {
-    width: 100%;
-    /* top: 41%; */
-    top: 56vh;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    transform: translate(-50%, -50vh);
+    width: 90vw;
+    top: 55.5vh;
+  }
+  .hero__content p:last-of-type {
+    width: 39vw;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .hero__profileImg {
+    max-width: 32%;
   }
 }

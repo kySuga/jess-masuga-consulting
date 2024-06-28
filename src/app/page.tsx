@@ -9,7 +9,7 @@ export default function Page() {
         <div className={styles.hero__content}>
           <div className={styles.hero__heading}>
             <Image
-              className={styles.hero__headshotImg}
+              className={styles.hero__profileImg}
               src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710642006/jessica-masuga_ktzf5n.jpg"
               loading="eager"
               width={300}
@@ -40,14 +40,22 @@ export default function Page() {
         <picture>
           <source
             srcSet="https://res.cloudinary.com/do9qt3sjt/image/upload/v1719509571/jmc-background-m_ys7rsp.jpg"
+            width={640}
+            height={2400}
             media="(max-width: 640px)"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/do9qt3sjt/image/upload/v1719537948/jmc-background-t_wjejn0.jpg"
+            width={1280}
+            height={1480}
+            media="(max-width: 1280px)"
           />
           <Image
             className={styles.hero__bgImg}
             src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710695822/jmc-background-d_bfkhgo.jpg"
             loading="eager"
-            width={640}
-            height={2400}
+            width={1920}
+            height={700}
             alt=""
           />
         </picture>
