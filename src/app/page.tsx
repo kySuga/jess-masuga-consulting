@@ -52,10 +52,10 @@ export default function Page() {
           />
           <Image
             className={styles.hero__bgImg}
-            src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1710695822/jmc-background-d_bfkhgo.jpg"
+            src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1720027101/jmc-background-d_b6ui3z.jpg"
             loading="eager"
             width={1920}
-            height={700}
+            height={1200}
             alt=""
           />
         </picture>

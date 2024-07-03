@@ -65,6 +65,44 @@
   --step-4-t: clamp(1.6018rem, -0.9516rem + 6.3734vi, 4.1472rem);
   /* Step 5: 28.8325px → 79.6262px */
   --step-5-t: clamp(1.802rem, -1.3825rem + 7.9489vi, 4.9766rem);
+
+  /* 1281px to 1920px */
+  /* Step -3: 11.2373px → 18.5185px */
+  --step--3-d: clamp(0.7023rem, -0.21rem + 1.1395vi, 1.1574rem);
+  /* Step -2: 12.642px → 22.2222px */
+  --step--2-d: clamp(0.7901rem, -0.4102rem + 1.4993vi, 1.3889rem);
+  /* Step -1: 14.2222px → 26.6667px */
+  --step--1-d: clamp(0.8889rem, -0.6703rem + 1.9475vi, 1.6667rem);
+  /* Step 0: 16px → 32px */
+  --step-0-d: clamp(1rem, -1.0047rem + 2.5039vi, 2rem);
+  /* Step 1: 18px → 38.4px */
+  --step-1-d: clamp(1.125rem, -1.431rem + 3.1925vi, 2.4rem);
+  /* Step 2: 20.25px → 46.08px */
+  --step-2-d: clamp(1.2656rem, -1.9707rem + 4.0423vi, 2.88rem);
+  /* Step 3: 22.7813px → 55.296px */
+  --step-3-d: clamp(1.4238rem, -2.6501rem + 5.0884vi, 3.456rem);
+  /* Step 4: 25.6289px → 66.3552px */
+  --step-4-d: clamp(1.6018rem, -3.5009rem + 6.3734vi, 4.1472rem);
+  /* Step 5: 28.8325px → 79.6262px */
+  --step-5-d: clamp(1.802rem, -4.5621rem + 7.9489vi, 4.9766rem);
+
+  /* 320px to 1920px */
+  /* Step -3: 11.2373px → 18.5185px */
+  --step--3: clamp(0.7023rem, 0.6113rem + 0.4551vi, 1.1574rem);
+  /* Step -2: 12.642px → 22.2222px */
+  --step--2: clamp(0.7901rem, 0.6704rem + 0.5988vi, 1.3889rem);
+  /* Step -1: 14.2222px → 26.6667px */
+  --step--1: clamp(0.8889rem, 0.7333rem + 0.7778vi, 1.6667rem);
+  /* Step 0: 16px → 32px */
+  --step-0: clamp(1rem, 0.8rem + 1vi, 2rem);
+  /* Step 1: 18px → 38.4px */
+  --step-1: clamp(1.125rem, 0.87rem + 1.275vi, 2.4rem);
+  /* Step 2: 20.25px → 46.08px */
+  --step-2: clamp(1.2656rem, 0.9428rem + 1.6144vi, 2.88rem);
+  /* Step 3: 22.7813px → 55.296px */
+  --step-3: clamp(1.4238rem, 1.0174rem + 2.0322vi, 3.456rem);
+  /* Step 4: 25.6289px → 66.3552px */
+  --step-4: clamp(1.6018rem, 1.0927rem + 2.5454vi, 4.1472rem);
 }
 
 *,
@@ -374,6 +412,37 @@ nav {
   }
   .copyright {
     font-size: var(--step--3-t);
+  }
+}
+
+@media (min-width: 1281px) {
+  main {
+    padding-block-start: 6%;
+  }
+  h1 {
+    font-size: var(--step-3-d);
+  }
+  h2 {
+    font-size: var(--step-2-d);
+  }
+  p {
+    font-size: var(--step-0-d);
+  }
+  .logo {
+    font-size: var(--step-2-d);
+  }
+  nav {
+    width: 40vw;
+    max-width: 50rem;
+  }
+  .nav__ul a {
+    font-size: var(--step-0-d);
+  }
+  .footer h2 {
+    font-size: var(--step--2-d);
+  }
+  .copyright {
+    font-size: var(--step--3-d);
   }
 }
 

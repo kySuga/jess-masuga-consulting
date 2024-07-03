@@ -25,9 +25,11 @@
   left: 50%;
   transform: translate(-50%, -50vh);
   width: 80vw;
+  max-width: 1640px;
 }
 .wrap {
   width: 80vw;
+  max-width: 1640px;
   padding: 4rem 0;
   margin: 0 auto;
   text-align: center;
@@ -39,7 +41,7 @@
   justify-content: flex-start;
 }
 .campaign img {
-  max-width: 1200px;
+  max-width: 1640px;
 }
 .content__contact {
   width: 80vw;
@@ -48,6 +50,7 @@
 }
 .content__campaign {
   width: 80vw;
+  max-width: 1640px;
   text-align: left;
 }
 .content__campaign p {
@@ -78,5 +81,36 @@
   }
   .hero__profileImg {
     max-width: 32%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .hero__content {
+    max-width: 1640px;
+  }
+  .hero__content p:nth-of-type(1) {
+    width: 60vw;
+    max-width: 70rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .hero__content p:nth-of-type(2) {
+    width: 36vw;
+    max-width: 45rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .hero__content p:last-of-type {
+    width: 39vw;
+    max-width: 44rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .hero__profileImg {
+    max-width: 22%;
+  }
+  .wrap,
+  .content__campaign {
+    width: 90vw;
   }
 }
