@@ -14,7 +14,7 @@
   margin-block-end: 2rem;
 }
 .hero__profileImg {
-  max-width: 60%;
+  width: 60%;
 }
 .hero__bgImg {
   border-radius: 0;
@@ -41,6 +41,7 @@
   justify-content: flex-start;
 }
 .campaign img {
+  width: 100%;
   max-width: 1640px;
 }
 .content__contact {
