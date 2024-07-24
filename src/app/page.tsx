@@ -3,6 +3,8 @@ import styles from "./home.module.css";
 
 // homepage
 export default function Page() {
+  const email = process.env.NEXT_PUBLIC_EMAIL;
+
   return (
     <>
       <div className={styles.hero}>
@@ -65,8 +67,15 @@ export default function Page() {
         <div className={styles.content__contact}>
           <h2>Contact Me</h2>
           <p>
-            My inbox is always open, you can contact me via this form or at
-            jessmasuga@hotmail.com.
+            My inbox is always open, you can contact me via{" "}
+            <a className="hover__noLine" href="contact">
+              this form
+            </a>{" "}
+            or a{" "}
+            <a className="hover__noLine" href={`mailto:${email}`}>
+              {email}
+            </a>
+            .
           </p>
         </div>
       </div>

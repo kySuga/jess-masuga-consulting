@@ -11,19 +11,29 @@ export default function Footer() {
         <nav className="footer__nav">
           <ul className="nav__ul">
             <li>
-              <Link href="/">Home</Link>
+              <Link className="hover__showLine" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link className="hover__showLine" href="/about">
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/my-work">My Work</Link>
+              <Link className="hover__showLine" href="/my-work">
+                My Work
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link className="hover__showLine" href="/contact">
+                Contact
+              </Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link className="hover__showLine" href="/blog">
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>

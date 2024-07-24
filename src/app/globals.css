@@ -313,7 +313,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.nav__ul a {
+.hover__showLine {
   padding-bottom: 3px; /* adds space between text and hover bg-image */
   font-size: var(--step--1-m);
   text-decoration: none;
@@ -324,9 +324,16 @@ nav {
   color: var(--secondary-white);
   transition: background-size 0.2s ease-out;
 }
-.footer__nav .nav__ul a {
+.hover__noLine {
+  padding-bottom: 3px; /* adds space between text and hover bg-image */
+  font-size: var(--step--1-m);
+  text-decoration: none;
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--secondary-white), var(--secondary-white));
+  background-size: 100% 0.1rem;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
   color: var(--secondary-white);
+  transition: background-position 0.4s ease-out;
 }
 
 .footer {
@@ -466,8 +473,12 @@ nav {
   button:focus-visible::before {
     opacity: 1;
   }
-  .nav__ul a:hover, 
-  .nav__ul a:focus-visible {
+  .hover__showLine:hover, 
+  .hover__showLine:focus-visible {
     background-size: 100% 0.1rem;
+  }
+  .hover__noLine:hover, 
+  .hover__noLine:focus-visible {
+    background-position: 20rem 100%;
   }
 }
