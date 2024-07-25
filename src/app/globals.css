@@ -179,12 +179,11 @@ img {
 }
 
 .form__wrap {
-  max-width: 76ch;
-  padding: 8rem 1rem 0;
+  max-width: 43rem;
   margin: 0 auto;
 }
 form {
-  max-width: 76ch;
+  /* max-width: 76ch; */
   margin: 0 auto 1rem;
 }
 form,
@@ -338,6 +337,7 @@ utility classes
   background-position: 0 100%;
   background-repeat: no-repeat;
   color: var(--secondary-white);
+  /* color: inherit; */
   transition: background-size 0.2s ease-out;
 }
 .hover__noLine {
@@ -349,8 +349,12 @@ utility classes
   background-size: 100% 0.1rem;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  color: var(--secondary-white);
+  /* color: var(--secondary-white); */
+  color: inherit;
   transition: background-position 0.4s ease-out;
+}
+.banner.secondary .hover__noLine {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--primary-color), var(--primary-color));
 }
 
 .footer {
