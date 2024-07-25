@@ -10,6 +10,9 @@
 
 :root {
   --max-width: 1920px;
+
+  /* build out standard padding and margin in sm, md, lg for classes like gutter-alley__wrap */
+
   --border-radius: 0.45rem;
 
   --primary-color: #7d2436;
@@ -313,9 +316,22 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
+/* =======
+utility classes
+======= */
+.gutter-alley__wrap {
+  max-width: 1640px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.top-to-bottom__wrap {
+  padding: 4rem 0;
+}
 .hover__showLine {
   padding-bottom: 3px; /* adds space between text and hover bg-image */
   font-size: var(--step--1-m);
+  /* font-size: inherit; */
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--secondary-white), var(--secondary-white));
   background-size: 0 0.1rem;
@@ -326,7 +342,8 @@ nav {
 }
 .hover__noLine {
   padding-bottom: 3px; /* adds space between text and hover bg-image */
-  font-size: var(--step--1-m);
+  /* font-size: var(--step--1-m); */
+  font-size: inherit;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--secondary-white), var(--secondary-white));
   background-size: 100% 0.1rem;
@@ -370,7 +387,6 @@ nav {
 
 .banner {
   width: 100%;
-  padding: 2rem 0;
   margin: 0 auto;
   text-align: center;
   background-color: var(--primary-color);
@@ -479,6 +495,6 @@ nav {
   }
   .hover__noLine:hover, 
   .hover__noLine:focus-visible {
-    background-position: 20rem 100%;
+    background-position: 25rem 100%;
   }
 }

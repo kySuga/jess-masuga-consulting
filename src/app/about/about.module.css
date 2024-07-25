@@ -5,19 +5,9 @@
   align-items: flex-start;
   justify-content: center;
   column-gap: 5rem;
-  padding: 4rem;
 }
 .about img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0.45rem;
-}
-.about__content {
-  margin-block-start: 7rem;
-}
-.about p {
-  width: 60ch;
+  margin: 2rem auto;
 }
 .content__quote figure {
   display: flex;
@@ -26,4 +16,18 @@
   column-gap: 0.5rem;
   font-size: 1.8rem;
   color: var(--secondary-white);
+}
+
+@media (max-width: 640px) {
+  .content__quote figure {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1280px) {
+  .about {
+    flex-direction: column;
+  }
 }
